@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM jlesage/baseimage-gui:ubuntu-18.04
 MAINTAINER iaroki
 RUN apt update && \
     apt install software-properties-common -y && \
@@ -7,4 +7,5 @@ RUN apt update && \
     apt update && \
     apt install ffmpeg obs-studio xserver-xorg-video-intel mesa-utils -y && \
     apt clean
-CMD ["obs"]
+COPY startapp.sh /startapp.sh
+#CMD ["obs"]
