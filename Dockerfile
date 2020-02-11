@@ -1,6 +1,6 @@
 FROM jlesage/baseimage-gui:ubuntu-18.04
 MAINTAINER iaroki
-RUN apt update && \
+RUN DEBIAN_FRONTEND=noninteractive && apt update && \
     apt install software-properties-common -y && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
     add-apt-repository ppa:oibaf/graphics-drivers -y && \
