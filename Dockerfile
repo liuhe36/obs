@@ -1,12 +1,12 @@
-FROM jlesage/baseimage-gui:ubuntu-16.04
+FROM jlesage/baseimage-gui:ubuntu-18.04
 MAINTAINER iaroki
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
     apt install software-properties-common -y && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
-    add-apt-repository ppa:oibaf/graphics-drivers -y && \
+    add-apt-repository ppa:paulo-miguel-dias/pkppa -y && \
     apt update && \
-    apt install ffmpeg obs-studio=25.0.8-0obsproject1~xenial xserver-xorg-video-intel mesa-utils -y && \
+    apt install ffmpeg obs-studio=27.2.4-0obsproject1~bionic mesa-utils -y && \
     apt clean
 COPY startapp.sh /startapp.sh
 #CMD ["obs"]
