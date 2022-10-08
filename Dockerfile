@@ -43,7 +43,7 @@ RUN \
     /var/tmp/*
 
 # add local files
-COPY root/ / 
+#COPY root/ / 
 
 VOLUME /config
 
