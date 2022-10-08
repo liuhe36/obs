@@ -51,7 +51,7 @@ RUN apt update && \
     apt install software-properties-common -y && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
     apt update && \
-    apt install obs-studio
+    apt install obs-studio && \
     apt clean
 COPY startapp.sh /startapp.sh
 #CMD ["obs"]
