@@ -8,7 +8,7 @@ RUN  apt update && \
     apt update && \
     apt install libmfx1 libmfx-tools libva-drm2 libva-x11-2 libva-wayland2 libva-glx2 vainfo -y && \
     apt install ffmpeg obs-studio intel-media-va-driver-non-free -y && \
-    apt install snap -y && \
+    apt install snapd -y && \
     snap install vlc -y && \
     apt clean
 ENV LIBVA_DRIVER_NAME=iHD
