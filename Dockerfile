@@ -13,7 +13,7 @@ RUN apt update && \
 RUN apt update && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
     apt update && \
-    apt install vlc obs-studio -y && \
+    aptitude install vlc obs-studio -y && \
     apt clean
     
 ENV LIBVA_DRIVER_NAME=iHD
