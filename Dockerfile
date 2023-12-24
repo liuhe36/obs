@@ -10,7 +10,7 @@ RUN apt update && \
     apt install mediainfo ffmpeg -y && \
     apt clean
 RUN apt update && \
-    apt-get install qt5-default  && \
+    apt-get -y install qt5-default  && \
     apt clean  
 RUN apt update && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
