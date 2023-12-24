@@ -1,4 +1,4 @@
-FROM jlesage/baseimage-gui:ubuntu-20.04
+FROM jlesage/baseimage-gui:ubuntu-18.04
 ENV DEBIAN_FRONTEND=noninteractive
 MAINTAINER liu
 
