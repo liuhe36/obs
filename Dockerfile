@@ -19,6 +19,6 @@ RUN apt update && \
     apt clean
     
 ENV LIBVA_DRIVER_NAME=iHD
-#COPY startapp.sh /startapp.sh
-CMD ["obs"]
+COPY startapp.sh /startapp.sh
+#CMD ["obs"]
 #update 20231008
