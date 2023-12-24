@@ -9,7 +9,8 @@ RUN apt update && \
     apt install libmfx1 libmfx-tools libva-drm2 libva-x11-2 libva-wayland2 libva-glx2 vainfo mesa-utils intel-media-va-driver-non-free -y && \
     apt install mediainfo ffmpeg -y && \
     apt clean
-RUN apt-get install qt5-default  && \
+RUN apt update && \
+    apt-get install qt5-default  && \
     apt clean  
 RUN apt update && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
