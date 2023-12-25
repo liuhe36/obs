@@ -10,7 +10,7 @@ RUN apt update && \
     apt install mediainfo ffmpeg -y && \
     apt clean
 RUN apt update && \
-    apt-get -y install qt5-default  && \
+    apt-get -y install qt5-default language-pack-zh-hans && \
     apt clean  
 RUN apt update && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
@@ -19,6 +19,14 @@ RUN apt update && \
     apt clean
     
 ENV LIBVA_DRIVER_NAME=iHD
+ENV USER_ID=0 
+ENV GROUP_ID=0 
+ENV TZ=Asia/Shanghai 
+ENV KEEP_APP_RUNNING=1 
+ENV ENABLE_CJK_FONT=1 
+ENV LANG=zh_CN.UTF-8 
+ENV DISPLAY_WIDTH=1920 
+ENV DISPLAY_HEIGHT=1080 
 COPY startapp.sh /startapp.sh
 #CMD ["obs"]
-#update 20231008
+#update 20231225
