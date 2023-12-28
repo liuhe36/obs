@@ -10,7 +10,7 @@ RUN apt update && \
     apt install mediainfo ffmpeg -y && \
     apt clean
 RUN apt update && \
-    apt-get -y install qt5-default language-pack-zh-hans && \
+    apt-get -y install qt5-default language-pack-zh-hans fonts-wqy-zenhei && \
     apt clean  
 RUN apt update && \
     add-apt-repository ppa:obsproject/obs-studio -y && \
@@ -23,7 +23,7 @@ ENV USER_ID=0
 ENV GROUP_ID=0 
 ENV TZ=Asia/Shanghai 
 ENV KEEP_APP_RUNNING=1 
-ENV ENABLE_CJK_FONT=1 
+#ENV ENABLE_CJK_FONT=1 
 ENV LANG=zh_CN.UTF-8 
 ENV DISPLAY_WIDTH=1920 
 ENV DISPLAY_HEIGHT=1080 
